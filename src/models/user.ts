@@ -4,7 +4,7 @@ const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize: typeof Sequelize, Sequelize: Sequelize) => {
 
-    const User = sequelize.define('User', {
+    const Users = sequelize.define('User', {
         username: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -24,7 +24,7 @@ module.exports = (sequelize: typeof Sequelize, Sequelize: Sequelize) => {
         },
     })
 
-    return User
+    return Users
 
 }
 

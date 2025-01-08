@@ -4,7 +4,7 @@ require("dotenv").config();
 interface DB {
     Sequelize: typeof Sequelize;
     sequelize: Sequelize;
-    User?: ReturnType<typeof sequelize.define>;
+    Users?: ReturnType<typeof sequelize.define>;
   }
   
 
@@ -28,6 +28,6 @@ const sequelize = new Sequelize(
   db.Sequelize = Sequelize;
   db.sequelize = sequelize;
 
-  db.User = require("./user")(sequelize, DataTypes);
+  db.Users = require("./user")(sequelize, DataTypes);
 
   module.exports = db;
